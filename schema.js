@@ -25,6 +25,7 @@ const HitsType = new GraphQLObjectType({
 const RecipesType = new GraphQLObjectType({
     name: 'Recipes',
     fields : () => ({
+        uri : { type : GraphQLString},
         label: { type : GraphQLString},
         image : { type : GraphQLString},
         ingredients : { type : GraphQLList(IngredientType) }
@@ -44,13 +45,7 @@ const IngredientType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType' ,
     fields : {
-        foods : {
-            type : new GraphQLList(FoodType),
-            resolve(parent , args) {
-                return axios.get(sample)
-                .then(res => res.data)
-            }
-        },
+        
         food : {
             type : FoodType,
             args : {
