@@ -3,11 +3,13 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
-import Dashboard from './components/Dashboard';
 import Hits from './components/Hits';
+import Footer from './components/Footer';
+import PORT from './config/config'
+
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql'
+  uri: `http://localhost:${PORT}/graphql`
 });
 
 
@@ -47,7 +49,9 @@ class App extends Component {
               </form>
             {/* <Route exact path='/' component={Dashboard} /> */}
             <Route exact path="/food/:q" component={Hits} />
+           
           </div>
+          <Footer />
         </Router>
       </ApolloProvider>
      );
