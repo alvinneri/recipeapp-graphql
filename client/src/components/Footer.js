@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import '../css/HitsItem.css'
 
 class Footer extends Component {
     
     render() { 
         return ( 
-            <div>
+            <div id="footer">
                 <div class="card">
                     <div class="card-header text-center">
                         &copy; Alvin Neri 2020

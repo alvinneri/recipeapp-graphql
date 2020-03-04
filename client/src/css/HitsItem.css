@@ -5,6 +5,8 @@
         
     }
 
+    
+
 }
 
 .loadercenter{
@@ -12,4 +14,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#footer{
+    position: fixed;
+    bottom: 0;
+  
+    /* And if you want the div to be full-width: */
+    left: 0;
+    right: 0;
 }
