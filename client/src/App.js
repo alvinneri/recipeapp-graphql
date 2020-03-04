@@ -9,7 +9,7 @@ import PORT from './config/config'
 
 
 const client = new ApolloClient({
-  uri: `http://localhost:${PORT}/graphql`
+  uri: `/graphql`
 });
 
 
